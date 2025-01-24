@@ -1,0 +1,54 @@
+.wrapper {
+    padding: 2rem 4rem 0 4rem;
+    background: var(--black); //can remove this line
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 14%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+
+    .active {
+        color: var(--white);
+        font-weight: 600;
+    }
+
+    a {
+        padding: 1.6rem;
+    }
+}
+.action {
+    width: 14%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-button {
+    color: var(--white);
+    background: var(--black);
+    font-size: 1.6rem;
+    padding: 0 0.8rem;
+}
+
+.sign-up {
+    border: 1px solid var(--white);
+    background-color: transparent;
+}
+
+.login {
+    background-color: var(--primary);
+}

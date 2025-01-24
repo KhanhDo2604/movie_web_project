@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary: #fe2c55;
+    --primary: #00935c;
     --black: #000;
     --white: #fff;
-    --text-color: #333;
+    --text-color: #a7a7a7;
 }
 
 * {
@@ -17,17 +17,19 @@ html {
 }
 
 body {
-    font-family: "Roboto", serif;
-    font-size: 1.6rem;
+    font-family: 'Roboto', serif;
+    font-size: 1.4rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
 }
 
-button,
-input,
-[tabindex] {
-    outline: none;
+button {
     border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.2rem 1.6rem 1.2rem;
+    color: var(--white);
+    border-radius: 0.8rem;
 }
 
 a[href] {
