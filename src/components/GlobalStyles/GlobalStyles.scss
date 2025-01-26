@@ -6,6 +6,7 @@
     --black: #000;
     --white: #fff;
     --text-color: #a7a7a7;
+    --button-padding: 1.2rem 1.6rem 1.2rem;
 }
 
 * {
@@ -27,7 +28,6 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 1.2rem 1.6rem 1.2rem;
     color: var(--white);
     border-radius: 0.8rem;
 }

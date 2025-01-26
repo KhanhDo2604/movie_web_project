@@ -35,6 +35,10 @@
     width: 14%;
     display: flex;
     justify-content: space-between;
+    .sign-up,
+    .login {
+        padding: var(--button-padding);
+    }
 }
 
 .search-button {
