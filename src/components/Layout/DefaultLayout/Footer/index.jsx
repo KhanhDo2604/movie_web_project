@@ -5,6 +5,7 @@ import IconButton from '@material/react-icon-button';
 import styles from './Footer.module.scss';
 import config from '../../../../config';
 import images from '../../../../assets/images';
+import Button from '../../../ui/Button/Button';
 
 const cx = classNames.bind(styles);
 
@@ -17,13 +18,13 @@ function Footer() {
                 </div>
                 <div className={cx('right-inner')}>
                     <div className={cx('nav')}>
-                        <Link to={config.routes.home}>Home</Link>
+                        <Button to={config.routes.home}>Home</Button>
                         <span> / </span>
-                        <Link to={config.routes.home}>Discover</Link>
+                        <Button to={config.routes.home}>Discover</Button>
                         <span> / </span>
-                        <Link to={config.routes.home}>Influence</Link>
+                        <Button to={config.routes.home}>Influence</Button>
                         <span> / </span>
-                        <Link to={config.routes.home}>Release</Link>
+                        <Button to={config.routes.home}>Release</Button>
                     </div>
                     <div className={cx('social-buttons')}>
                         <IconButton>
@@ -42,9 +43,9 @@ function Footer() {
             </div>
             <div className={cx('lower')}>
                 <div className={cx('terms-buttons')}>
-                    <button>Privacy policy</button>
-                    <button>Term of service</button>
-                    <button>Language</button>
+                    <Button>Privacy policy</Button>
+                    <Button>Term of service</Button>
+                    <Button>Language</Button>
                 </div>
                 <div className={cx('copy-right')}>
                     <span>@2025</span>

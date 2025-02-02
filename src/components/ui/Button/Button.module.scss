@@ -1,0 +1,28 @@
+.primary {
+    background-color: var(--primary);
+    padding: var(--button-padding);
+}
+
+.outline {
+    border: 1px solid var(--white);
+    background-color: transparent;
+    padding: var(--button-padding);
+}
+
+.text {
+    padding: 1.6rem;
+
+    &.active {
+        color: var(--white);
+        font-weight: 600;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 1.2rem;
+}

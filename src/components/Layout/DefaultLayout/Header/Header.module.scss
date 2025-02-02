@@ -1,10 +1,10 @@
 .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), var(--black) 100%);
     padding: 2rem 4rem 0 4rem;
-    background: var(--black); //can remove this line
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // right: 0;
 }
 
 .inner {
@@ -21,24 +21,11 @@
     display: flex;
     justify-content: space-between;
     width: 35%;
-
-    .active {
-        color: var(--white);
-        font-weight: 600;
-    }
-
-    a {
-        padding: 1.6rem;
-    }
 }
 .action {
     width: 14%;
     display: flex;
     justify-content: space-between;
-    .sign-up,
-    .login {
-        padding: var(--button-padding);
-    }
 }
 
 .search-button {
@@ -46,13 +33,4 @@
     background: var(--black);
     font-size: 1.6rem;
     padding: 0 0.8rem;
-}
-
-.sign-up {
-    border: 1px solid var(--white);
-    background-color: transparent;
-}
-
-.login {
-    background-color: var(--primary);
 }

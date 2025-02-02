@@ -7,6 +7,7 @@ import { useState } from 'react';
 import styles from './Header.module.scss';
 import images from '../../../../assets/images';
 import config from '../../../../config';
+import Button from '../../../ui/Button/Button';
 
 const cx = classNames.bind(styles);
 
@@ -19,59 +20,61 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={config.routes.home} onClick={() => setMenuChange(config.routes.home)}>
+                    <Button to={config.routes.home} onClick={() => setMenuChange(config.routes.home)}>
                         <img src={images.logo} alt="Logo" width={54} />
-                    </Link>
+                    </Button>
                 </div>
 
                 <div className={cx('nav')}>
-                    <Link
+                    <Button
                         to={config.routes.home}
-                        className={handleMenuChange(config.routes.home)}
                         onClick={() => setMenuChange(config.routes.home)}
+                        className={handleMenuChange(config.routes.home)}
+                        text
                     >
                         Home
-                    </Link>
-                    <Link
+                    </Button>
+                    <Button
                         to={config.routes.discover}
-                        className={handleMenuChange(config.routes.discover)}
                         onClick={() => setMenuChange(config.routes.discover)}
+                        className={handleMenuChange(config.routes.discover)}
+                        text
                     >
                         Discover
-                    </Link>
-                    <Link
+                    </Button>
+                    <Button
                         to={config.routes.movieRelease}
-                        className={handleMenuChange(config.routes.movieRelease)}
                         onClick={() => setMenuChange(config.routes.movieRelease)}
+                        className={handleMenuChange(config.routes.movieRelease)}
+                        text
                     >
                         Movie Release
-                    </Link>
-                    <Link
+                    </Button>
+                    <Button
                         to={config.routes.about}
-                        className={handleMenuChange(config.routes.about)}
                         onClick={() => setMenuChange(config.routes.about)}
+                        className={handleMenuChange(config.routes.about)}
+                        text
                     >
                         About
-                    </Link>
-                    <Link
+                    </Button>
+                    <Button
                         to={config.routes.forum}
-                        className={handleMenuChange(config.routes.forum)}
                         onClick={() => setMenuChange(config.routes.forum)}
+                        className={handleMenuChange(config.routes.forum)}
+                        text
                     >
                         Forum
-                    </Link>
+                    </Button>
                 </div>
 
                 <div className={cx('action')}>
-                    <button type="button" className={cx('search-button')}>
+                    <Button className={cx('search-button')}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
-                    <button type="button" className={cx('sign-up')}>
-                        Sign Up
-                    </button>
-                    <button type="button" className={cx('login')}>
-                        Login
-                    </button>
+                    </Button>
+                    <Button outline>Sign Up</Button>
+
+                    <Button primary>Login</Button>
                 </div>
             </div>
         </header>

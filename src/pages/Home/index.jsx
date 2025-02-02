@@ -1,7 +1,9 @@
+import RandomAdvertisedMovie from './RandomAdvertisedMovie/RandomAdvertisedMovie';
+
 function HomePage() {
     return (
         <div>
-            <h1>Hello</h1>
+            <RandomAdvertisedMovie />
         </div>
     );
 }
