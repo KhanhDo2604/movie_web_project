@@ -1,0 +1,38 @@
+@mixin button-position {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+}
+
+.movie-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 2.4rem;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.left-decoration {
+    @include button-position;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0), transparent);
+}
+
+.right-decoration {
+    @include button-position;
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0), transparent);
+}
+
+.left-btn,
+.right-btn {
+    color: var(--text-color);
+}

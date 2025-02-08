@@ -1,0 +1,70 @@
+$border-radius: 1.2rem;
+
+.card-wrapper {
+    position: relative;
+    min-width: 20%;
+    border-radius: $border-radius;
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    &:hover {
+        border: 2px solid var(--primary);
+    }
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1.6rem 1.6rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0) 50%);
+}
+
+.poster {
+    border-radius: 1.2rem;
+    & img {
+        border-radius: $border-radius;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0.8rem 0;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+}
+
+.info-wrapper {
+    display: flex;
+    span {
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+
+    .rating {
+        color: var(--white);
+        font-weight: 700;
+        margin: 0 0.4rem;
+    }
+}
+
+.genre {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; // Limits text to 1 lines
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 68%;
+    word-break: break-word;
+    margin-left: 0.4rem;
+}
