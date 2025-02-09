@@ -5,6 +5,7 @@ import tempData from '../../../data/TempData';
 import MovieCard from '../../../components/ui/MovieCard/MovieCard';
 import HorizontalScrollSection from '../../../components/ui/HorizontalScrollSection/HorizontalScrollSection';
 import PosterCard from '../../../components/ui/PosterCard/PosterCard';
+import MovieCardWithIndex from '../../../components/ui/MovieCardWithIndex/MovieCardWithIndex';
 
 const cx = classNames.bind(styles);
 
@@ -17,7 +18,16 @@ function ListMovie() {
                     <PosterCard key={index} movie={movie} />
                 ))}
             </HorizontalScrollSection>
+            <div className={cx('spacer')}></div>
             <h4 className={cx('title')}>Popular of the week</h4>
+            <HorizontalScrollSection>
+                {tempData.map((movie, index) => (
+                    <MovieCardWithIndex key={index} movie={movie} index={index} />
+                ))}
+            </HorizontalScrollSection>
+            <div className={cx('spacer')}></div>
+
+            <div className={cx('best-feature')}></div>
 
             <h4 className={cx('title')}>Movies</h4>
             <HorizontalScrollSection>

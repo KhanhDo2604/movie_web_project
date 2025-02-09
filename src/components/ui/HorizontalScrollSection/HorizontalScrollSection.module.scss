@@ -5,6 +5,16 @@
     justify-content: center;
 }
 
+@function linear-background($direction) {
+    @return linear-gradient(
+        to #{$direction},
+        black 0%,
+        rgba(0, 0, 0, 0.8) 40%,
+        rgba(0, 0, 0, 0.3) 80%,
+        transparent 100%
+    );
+}
+
 .container {
     position: relative;
     display: flex;
@@ -23,16 +33,20 @@
 .left-decoration {
     @include button-position;
     left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0), transparent);
+    background: linear-background(right);
 }
 
 .right-decoration {
     @include button-position;
     right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0), transparent);
+    background: linear-background(left);
 }
 
 .left-btn,
 .right-btn {
     color: var(--text-color);
+
+    &:active {
+        color: var(--white);
+    }
 }

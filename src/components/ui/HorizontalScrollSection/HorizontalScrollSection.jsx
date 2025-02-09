@@ -43,6 +43,9 @@ function HorizontalScrollSection({ children }) {
 
     return (
         <div className={cx('container')}>
+            <div ref={scrollRef} className={cx('movie-list')}>
+                {children}
+            </div>
             {canScrollLeft && (
                 <div className={cx('left-decoration')}>
                     <Button className={cx('left-btn')} onClick={() => scroll('left')}>
@@ -50,9 +53,6 @@ function HorizontalScrollSection({ children }) {
                     </Button>
                 </div>
             )}
-            <div ref={scrollRef} className={cx('movie-list')}>
-                {children}
-            </div>
             {canScrollRight && (
                 <div className={cx('right-decoration')}>
                     <Button className={cx('right-btn')} onClick={() => scroll('right')}>

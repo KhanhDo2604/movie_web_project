@@ -1,7 +1,9 @@
 $border-radius: 1.2rem;
 
 .card-wrapper {
-    min-width: 14%;
+    display: flex;
+    align-items: center;
+    min-width: 24%;
     border-radius: $border-radius;
     padding-bottom: 0.8rem;
     margin-bottom: 0.8rem;
@@ -11,13 +13,28 @@ $border-radius: 1.2rem;
     }
 }
 
+.index {
+    color: var(--white);
+    font-size: 5rem;
+}
+
 .poster {
-    border-radius: 1.2rem;
+    border-radius: $border-radius;
+    margin: 0 1.2rem;
+
     & img {
         border-radius: $border-radius;
         object-fit: cover;
         width: 100%;
     }
+}
+
+.age-tag {
+    border: 0.5px solid var(--text-color);
+    border-radius: 0.8rem;
+    padding: 0.4rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .title {
@@ -33,14 +50,22 @@ $border-radius: 1.2rem;
 }
 
 .info {
-    padding: 0 0.4rem;
+    padding-right: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 58%;
 }
 
 .info-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 42%;
     span {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: var(--text-color);
     }
 
@@ -52,10 +77,10 @@ $border-radius: 1.2rem;
 
 .genre {
     display: -webkit-box;
-    -webkit-line-clamp: 1; // Limits text to 1 lines
+    -webkit-line-clamp: 2; // Limits text to 1 lines
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 58%;
-    word-break: break-word;
+    color: var(--text-color);
+    font-size: 1.2rem;
 }

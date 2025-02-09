@@ -24,7 +24,7 @@ $border-radius: 1.2rem;
 }
 
 .poster {
-    border-radius: 1.2rem;
+    border-radius: $border-radius;
     & img {
         border-radius: $border-radius;
         object-fit: cover;
@@ -46,6 +46,7 @@ $border-radius: 1.2rem;
 
 .info-wrapper {
     display: flex;
+    align-items: center;
     span {
         font-size: 1rem;
         color: var(--text-color);

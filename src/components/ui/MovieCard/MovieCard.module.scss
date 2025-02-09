@@ -34,11 +34,13 @@ $border-radius: 1.2rem;
 
 .info {
     padding: 0 0.4rem;
+    max-width: 100%;
 }
 
 .info-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     span {
         font-size: 1rem;
         color: var(--text-color);
