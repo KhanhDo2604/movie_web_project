@@ -1,9 +1,7 @@
-$border-radius: 1.2rem;
-
 .card-wrapper {
     position: relative;
-    min-width: 20%;
-    border-radius: $border-radius;
+    min-width: 19vw;
+    border-radius: var(--border-radius);
     padding-bottom: 0.8rem;
     margin-bottom: 0.8rem;
 
@@ -12,23 +10,29 @@ $border-radius: 1.2rem;
     }
 }
 
+.card-wrapper-active {
+    @extend .card-wrapper;
+    border: 2px solid var(--primary);
+}
+
 .info {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 0 1.6rem 1.6rem;
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0) 50%);
 }
 
 .poster {
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     & img {
-        border-radius: $border-radius;
-        object-fit: cover;
+        border-radius: var(--border-radius);
+        object-fit: fill;
         width: 100%;
+        background-repeat: no-repeat;
     }
 }
 

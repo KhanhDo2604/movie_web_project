@@ -31,7 +31,7 @@ const tempData = [
         genre: ['Epic', 'Period Drama', 'Prison Drama', 'Drama'],
         actors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
         plot: 'A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.',
-        poster: 'https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg',
+        poster: 'https://m.media-amazon.com/images/I/71GTnYW5ejL._AC_SX679_.jpg',
         rating: 9.3,
     }),
     new Movie({

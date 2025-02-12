@@ -6,6 +6,7 @@ import MovieCard from '../../../components/ui/MovieCard/MovieCard';
 import HorizontalScrollSection from '../../../components/ui/HorizontalScrollSection/HorizontalScrollSection';
 import PosterCard from '../../../components/ui/PosterCard/PosterCard';
 import MovieCardWithIndex from '../../../components/ui/MovieCardWithIndex/MovieCardWithIndex';
+import FeatureSection from '../../../components/ui/FeatureSection/FeatureSection';
 
 const cx = classNames.bind(styles);
 
@@ -27,7 +28,9 @@ function ListMovie() {
             </HorizontalScrollSection>
             <div className={cx('spacer')}></div>
 
-            <div className={cx('best-feature')}></div>
+            <div className={cx('best-feature')}>
+                <FeatureSection />
+            </div>
 
             <h4 className={cx('title')}>Movies</h4>
             <HorizontalScrollSection>

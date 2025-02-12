@@ -6,9 +6,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
-function PosterCard({ movie }) {
+function PosterCard({ movie, active = '', onClick }) {
     return (
-        <div className={cx('card-wrapper')}>
+        <div className={cx(`card-wrapper${active}`)} onClick={onClick}>
             <div className={cx('poster')}>
                 <img src={movie.poster} alt={movie.title} />
             </div>

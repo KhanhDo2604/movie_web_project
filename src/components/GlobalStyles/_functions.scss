@@ -1,0 +1,9 @@
+@function linear-background($direction) {
+    @return linear-gradient(
+        to #{$direction},
+        black 0%,
+        rgba(0, 0, 0, 0.8) 40%,
+        rgba(0, 0, 0, 0.3) 80%,
+        transparent 100%
+    );
+}

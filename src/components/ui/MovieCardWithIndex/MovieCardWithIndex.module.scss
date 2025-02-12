@@ -1,10 +1,8 @@
-$border-radius: 1.2rem;
-
 .card-wrapper {
     display: flex;
     align-items: center;
     min-width: 24%;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     padding-bottom: 0.8rem;
     margin-bottom: 0.8rem;
 
@@ -19,11 +17,11 @@ $border-radius: 1.2rem;
 }
 
 .poster {
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     margin: 0 1.2rem;
 
     & img {
-        border-radius: $border-radius;
+        border-radius: var(--border-radius);
         object-fit: cover;
         width: 100%;
     }
