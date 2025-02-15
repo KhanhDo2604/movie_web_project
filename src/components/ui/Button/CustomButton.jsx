@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import styles from './Button.module.scss';
+import styles from './CustomButton.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Button({
+function CustomButton({
     to,
     href,
     primary = false,
@@ -65,7 +65,7 @@ function Button({
     );
 }
 
-Button.propTypes = {
+CustomButton.propTypes = {
     to: PropTypes.string,
     href: PropTypes.string,
     primary: PropTypes.bool,
@@ -82,4 +82,4 @@ Button.propTypes = {
     onClick: PropTypes.func,
 };
 
-export default Button;
+export default CustomButton;

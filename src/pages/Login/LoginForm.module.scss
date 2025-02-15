@@ -1,0 +1,38 @@
+.login-form {
+    width: 100%;
+    max-width: 32%;
+    padding: 2.4rem;
+    border: 1px solid var(--gray);
+    border-radius: 1.6rem;
+    background: var(--form-bg-color);
+    color: var(--white);
+
+    p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: var(--text-color);
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.4rem;
+    gap: 0.8rem;
+
+    label {
+        font-size: 1.6rem;
+        color: var(--white);
+        font-weight: 700;
+    }
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.form-footer {
+    margin-top: 2.4rem;
+}

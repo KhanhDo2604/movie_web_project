@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './HorizontalScrollSection.module.scss';
-import Button from '../Button';
+import CustomButton from '../Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -48,16 +48,16 @@ function HorizontalScrollSection({ children }) {
             </div>
             {canScrollLeft && (
                 <div className={cx('left-decoration')}>
-                    <Button className={cx('left-btn')} onClick={() => scroll('left')}>
+                    <CustomButton className={cx('left-btn')} onClick={() => scroll('left')}>
                         <FontAwesomeIcon icon={faCircleChevronLeft} size="2xl" />
-                    </Button>
+                    </CustomButton>
                 </div>
             )}
             {canScrollRight && (
                 <div className={cx('right-decoration')}>
-                    <Button className={cx('right-btn')} onClick={() => scroll('right')}>
+                    <CustomButton className={cx('right-btn')} onClick={() => scroll('right')}>
                         <FontAwesomeIcon icon={faCircleChevronRight} size="2xl" />
-                    </Button>
+                    </CustomButton>
                 </div>
             )}
         </div>

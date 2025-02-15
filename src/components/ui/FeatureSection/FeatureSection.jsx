@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './FeatureSection.module.scss';
-import Button from '../Button';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import tempData from '../../../data/TempData';
 import { faBookmark, faCirclePlay, faStar } from '@fortawesome/free-solid-svg-icons';
 import PosterCard from '../PosterCard/PosterCard';
+import CustomButton from '../Button/CustomButton';
 
 const cx = classNames.bind(styles);
 
@@ -64,12 +65,12 @@ function FeatureSection() {
                     <p className={cx('description')}>{movie.plot}</p>
 
                     <div className={cx('actions')}>
-                        <Button className={cx('btn')} primary leftIcon={<FontAwesomeIcon icon={faCirclePlay} />}>
+                        <CustomButton className={cx('btn')} primary leftIcon={<FontAwesomeIcon icon={faCirclePlay} />}>
                             Watch Trailer
-                        </Button>
-                        <Button className={cx('btn')} outline leftIcon={<FontAwesomeIcon icon={faBookmark} />}>
+                        </CustomButton>
+                        <CustomButton className={cx('btn')} outline leftIcon={<FontAwesomeIcon icon={faBookmark} />}>
                             Add to Watchlist
-                        </Button>
+                        </CustomButton>
                     </div>
                 </div>
                 <div className={cx('content-list')}>

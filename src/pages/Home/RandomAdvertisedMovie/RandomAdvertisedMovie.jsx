@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './RandomAdvertisedMovie.module.scss';
-import Button from '../../../components/ui/Button';
+import CustomButton from '../../../components/ui/Button/CustomButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
@@ -41,12 +41,12 @@ function RandomAdvertisedMovie() {
                 </div>
 
                 <div className={cx('actions')}>
-                    <Button className={cx('btn')} primary leftIcon={<FontAwesomeIcon icon={faCirclePlay} />}>
+                    <CustomButton className={cx('btn')} primary leftIcon={<FontAwesomeIcon icon={faCirclePlay} />}>
                         Watch Trailer
-                    </Button>
-                    <Button className={cx('btn')} outline leftIcon={<FontAwesomeIcon icon={faBookmark} />}>
+                    </CustomButton>
+                    <CustomButton className={cx('btn')} outline leftIcon={<FontAwesomeIcon icon={faBookmark} />}>
                         Add to Watchlist
-                    </Button>
+                    </CustomButton>
                 </div>
             </div>
         </div>

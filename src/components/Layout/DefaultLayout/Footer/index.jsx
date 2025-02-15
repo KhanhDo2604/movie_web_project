@@ -5,7 +5,7 @@ import IconButton from '@material/react-icon-button';
 import styles from './Footer.module.scss';
 import config from '../../../../config';
 import images from '../../../../assets/images';
-import Button from '../../../ui/Button/Button';
+import CustomButton from '../../../ui/Button/CustomButton';
 
 const cx = classNames.bind(styles);
 
@@ -18,13 +18,13 @@ function Footer() {
                 </div>
                 <div className={cx('right-inner')}>
                     <div className={cx('nav')}>
-                        <Button to={config.routes.home}>Home</Button>
+                        <CustomButton to={config.routes.home}>Home</CustomButton>
                         <span> / </span>
-                        <Button to={config.routes.home}>Discover</Button>
+                        <CustomButton to={config.routes.home}>Discover</CustomButton>
                         <span> / </span>
-                        <Button to={config.routes.home}>Influence</Button>
+                        <CustomButton to={config.routes.home}>Influence</CustomButton>
                         <span> / </span>
-                        <Button to={config.routes.home}>Release</Button>
+                        <CustomButton to={config.routes.home}>Release</CustomButton>
                     </div>
                     <div className={cx('social-buttons')}>
                         <IconButton>
@@ -43,9 +43,9 @@ function Footer() {
             </div>
             <div className={cx('lower')}>
                 <div className={cx('terms-buttons')}>
-                    <Button>Privacy policy</Button>
-                    <Button>Term of service</Button>
-                    <Button>Language</Button>
+                    <CustomButton>Privacy policy</CustomButton>
+                    <CustomButton>Term of service</CustomButton>
+                    <CustomButton>Language</CustomButton>
                 </div>
                 <div className={cx('copy-right')}>
                     <span>@2025</span>
