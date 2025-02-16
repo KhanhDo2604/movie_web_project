@@ -1,0 +1,33 @@
+$gray: #464646;
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+    gap: 0.8rem;
+
+    label {
+        font-size: 1.6rem;
+        color: var(--white);
+        font-weight: 700;
+    }
+}
+
+.text-field {
+    color: var(--white);
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    padding: 1.4rem;
+    background: transparent;
+    border: 0.1rem solid rgba($gray, 0.5);
+    outline: none;
+    transition: border 0.2s ease-in-out;
+
+    &:hover {
+        border: 0.1rem solid rgba($gray, 0.8);
+    }
+
+    &:focus {
+        border: 0.1rem solid rgba($gray, 0.8);
+    }
+}

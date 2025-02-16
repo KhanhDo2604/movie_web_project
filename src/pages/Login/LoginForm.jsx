@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { Box, Button } from '@mui/material';
-import TextField from '@mui/material/TextField';
 import classNames from 'classnames/bind';
 
 import images from '../../assets/images';
-import CommonFunctions from '../../utils/common_functions';
 import config from '../../config';
 import styles from './LoginForm.module.scss';
+import CustomTextField from '../../components/ui/TextField/TextField';
+import CustomButton from '../../components/ui/Button/CustomButton';
 
 const cx = classNames.bind(styles);
 
@@ -15,123 +14,46 @@ function LoginForm() {
     const [password, setPassword] = useState('');
 
     return (
-        <Box component="form" noValidate autoComplete="off" className={cx('login-form')}>
+        <form noValidate autoComplete="off" className={cx('login-form')}>
             <div className={cx('form-header')}>
                 <div className={cx('left-side')}>
                     <img src={images.logo} alt="Logo" width={50} />
                     <p>Login to your account</p>
                 </div>
                 <div className={cx('right-side')}>
-                    <Button
-                        variant="outlined"
-                        sx={{
-                            color: 'white',
-                            borderColor: '#464646',
-                            borderRadius: '1.6rem',
-                            fontSize: '1.6rem',
-                            height: '100%',
-                            padding: '0 2.4rem',
-                        }}
-                    >
+                    <CustomButton className={cx('close-btn')} to={config.routes.home} outline>
                         Close
-                    </Button>
+                    </CustomButton>
                 </div>
             </div>
             <div className={cx('form-body')}>
-                <div className={cx('form-group')}>
-                    <label htmlFor="email">Email</label>
-                    <TextField
-                        required
-                        type="email"
-                        variant="outlined"
-                        placeholder="Email"
-                        sx={{
-                            '& .MuiOutlinedInput-root': {
-                                color: 'white',
-                                borderRadius: '0.8rem',
-                                fontSize: '1.4rem',
-                                '& fieldset': {
-                                    border: `0.1rem solid ${CommonFunctions.hexWithAlpha('#464646', 0.5)}`,
-                                },
-                                '&:hover fieldset': {
-                                    border: `0.1rem solid ${CommonFunctions.hexWithAlpha('#464646', 0.7)}`,
-                                },
-                                '&.Mui-focused fieldset': {
-                                    border: `0.1rem solid ${CommonFunctions.hexWithAlpha('#464646', 0.7)}`,
-                                },
-                            },
-                        }}
-                    />
-                </div>
-                <div className={cx('form-group')}>
-                    <label htmlFor="password">Password</label>
-                    <TextField
-                        className={cx('text-field')}
-                        required
-                        type="password"
-                        variant="outlined"
-                        placeholder="Password"
-                        sx={{
-                            '& .MuiOutlinedInput-root': {
-                                color: 'white',
-                                borderRadius: '0.8rem',
-                                fontSize: '1.4rem',
-                                '& fieldset': {
-                                    border: `0.1rem solid ${CommonFunctions.hexWithAlpha('#464646', 0.5)}`,
-                                },
-                                '&:hover fieldset': {
-                                    border: `0.1rem solid ${CommonFunctions.hexWithAlpha('#464646', 0.7)}`,
-                                },
-                                '&.Mui-focused fieldset': {
-                                    border: `0.1rem solid ${CommonFunctions.hexWithAlpha('#464646', 0.7)}`,
-                                },
-                            },
-                        }}
-                    />
-                </div>
-                <Button
-                    variant="text"
-                    sx={{
-                        color: 'white',
-                        padding: '0',
-                        fontSize: '1.4rem',
-                        marginTop: '2.4rem',
-                    }}
-                >
+                <CustomTextField label={'Email'} placeholder="Email" required type="email" variant="outlined" />
+
+                <CustomTextField
+                    label={'Password'}
+                    placeholder="Password"
+                    required
+                    type="password"
+                    variant="outlined"
+                />
+
+                <CustomButton className={cx('forgot-password-btn')} text>
                     Forgot Password
-                </Button>
-                <Button
-                    fullWidth
-                    sx={{
-                        color: '#464646',
-                        backgroundColor: '#ffffff',
-                        borderRadius: '0.8rem',
-                        fontSize: '1.6rem',
-                        fontWeight: 'bold',
-                        padding: '0.8rem 0',
-                        marginTop: '2.4rem',
-                    }}
-                >
+                </CustomButton>
+                <CustomButton className={cx('login-btn')} filled>
                     Login
-                </Button>
+                </CustomButton>
 
                 <div className={cx('form-footer')}>
                     <p>
                         Don't have an account?
-                        <Button
-                            href={config.routes.register}
-                            variant="text"
-                            sx={{
-                                color: 'white',
-                                padding: '0',
-                            }}
-                        >
+                        <CustomButton className={cx('sign-up-btn')} to={config.routes.register} text>
                             Sign up
-                        </Button>
+                        </CustomButton>
                     </p>
                 </div>
             </div>
-        </Box>
+        </form>
     );
 }
 

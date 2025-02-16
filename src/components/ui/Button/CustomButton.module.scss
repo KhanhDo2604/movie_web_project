@@ -1,24 +1,30 @@
 .primary {
     background-color: var(--primary);
     padding: var(--button-padding);
+    border-radius: 0.8rem;
+}
+
+.filled {
+    background-color: var(--white);
+    padding: var(--button-padding);
+    color: var(--gray);
+    font-weight: bold;
+    border-radius: 0.8rem;
 }
 
 .outline {
     border: 1px solid var(--white);
     background: transparent;
     padding: var(--button-padding);
+    border-radius: 0.8rem;
 }
 
 .text {
-    padding: 1.6rem;
+    text-decoration: none;
 
     &.active {
         color: var(--white);
         font-weight: 600;
-    }
-
-    &:hover {
-        text-decoration: underline;
     }
 }
 

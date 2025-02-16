@@ -14,10 +14,28 @@
     }
 }
 
+.close-btn {
+    color: var(--white) !important;
+    font-size: 1.6rem;
+    height: 100%;
+    // padding: 0 2.4rem;
+    border-color: var(--gray);
+}
+
+.register-btn {
+    width: 100%;
+    margin-top: 1.6rem;
+}
+
+.login-btn {
+    color: var(--white) !important;
+    margin-left: 0.8rem;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
     gap: 0.8rem;
 
     label {
@@ -34,5 +52,5 @@
 }
 
 .form-footer {
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
 }
